@@ -1,7 +1,13 @@
 import styles from "./DashboardContent.module.css";
 
+import ProfileContainer from "../ProfileContainer/ProfileContainer";
+
 const DashboardContent = function () {
-  return <div></div>;
+  return (
+    <div className={styles["dashboard-content"]}>
+      <ProfileContainer></ProfileContainer>
+    </div>
+  );
 };
 
 export default DashboardContent;

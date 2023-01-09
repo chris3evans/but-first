@@ -5,7 +5,7 @@ import DashboardContent from "../DashboardContent/DashboardContent";
 
 const Dashboard = function () {
   return (
-    <div>
+    <div className={styles["dashboard"]}>
       <DashboardMenu></DashboardMenu>
       <DashboardContent></DashboardContent>
     </div>
