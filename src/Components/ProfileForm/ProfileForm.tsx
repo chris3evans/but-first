@@ -5,26 +5,28 @@ const ProfileForm = function () {
     <form className={styles["profile-form"]}>
       <div className={styles["profile-form-grouping"]}>
         <div className={styles["input-image"]}>
+          <label className={styles["form-label"]} htmlFor="profile-image">
+            Profile Photo
+          </label>
           <input
-            type="image"
+            type="file"
             id="profile-image"
+            accept="image/png, image/jpeg"
             name="profileImage"
             alt="Upload Image"
-            width={150}
-            height={150}
             className={styles["image-input"]}
           ></input>
         </div>
         <div className={styles["input-field"]}>
+          <label className={styles["form-label"]} htmlFor="name">
+            Full Name
+          </label>
           <input
             className={styles["form-input"]}
             type="text"
             id="name"
             name="name"
           ></input>
-          <label className={styles["form-label"]} htmlFor="name">
-            Full Name
-          </label>
         </div>
       </div>
       <div className={styles["bio-field"]}>
