@@ -4,16 +4,16 @@ const ProfileForm = function () {
   return (
     <form className={styles["profile-form"]}>
       <div className={styles["profile-form-grouping"]}>
-        <div className={styles["input-field"]}>
+        <div className={styles["input-image"]}>
           <input
             type="image"
             id="profile-image"
             name="profileImage"
+            alt="Upload Image"
+            width={150}
+            height={150}
             className={styles["image-input"]}
           ></input>
-          <label htmlFor="profile-image" className={styles["input-label"]}>
-            Personal Profile
-          </label>
         </div>
         <div className={styles["input-field"]}>
           <input
@@ -27,20 +27,21 @@ const ProfileForm = function () {
           </label>
         </div>
       </div>
-      <div className={styles["input-field"]}>
-        <input
-          type="text"
-          id="personal-bio"
-          name="personalBio"
-          className={styles["form-input"]}
-        ></input>
+      <div className={styles["bio-field"]}>
         <label htmlFor="personal-bio" className={styles["form-label"]}>
           Personal Bio
         </label>
+        <textarea
+          id="personal-bio"
+          name="personalBio"
+          className={styles["textarea-input"]}
+        ></textarea>
       </div>
       <div className={styles["check-box-container"]}>
-        <p>What type of brand deals are you looking for?</p>
-        <div className={styles["input-field"]}>
+        <p className={styles["deal-title"]}>
+          What type of brand deals are you looking for?
+        </p>
+        <div className={styles["checkbox-field"]}>
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
@@ -51,7 +52,7 @@ const ProfileForm = function () {
             Supplements
           </label>
         </div>
-        <div className={styles["input-field"]}>
+        <div className={styles["checkbox-field"]}>
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
@@ -62,7 +63,7 @@ const ProfileForm = function () {
             Clothing
           </label>
         </div>
-        <div className={styles["input-field"]}>
+        <div className={styles["checkbox-field"]}>
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
@@ -73,7 +74,7 @@ const ProfileForm = function () {
             Membership / Subscription
           </label>
         </div>
-        <div className={styles["input-field"]}>
+        <div className={styles["checkbox-field"]}>
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
