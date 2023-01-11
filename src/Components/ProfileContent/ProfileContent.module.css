@@ -8,6 +8,7 @@
   justify-content: center;
   align-content: center;
   padding: 12.5rem;
+  display: none;
 }
 
 .profile-content-grouping {
@@ -15,9 +16,6 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-}
-
-.profile-image {
 }
 
 .profile-image-file {

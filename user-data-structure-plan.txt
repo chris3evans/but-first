@@ -1,0 +1,23 @@
+user = {
+  profile: {
+    profilePhoto: 'example.png',
+    fullName: 'Example Name',
+    personalBio: 'This is just an example personal bio',
+    brandDealTypes: ['Supplements', 'Clothing']
+  },
+  myOffers: [
+    {
+      ...
+    }
+  ],
+  mySponsors: [
+    {
+      ...
+    }
+  ],
+  settings: {
+    colorTheme: 'light',
+    mode: 'influencer'
+  }
+}
+

@@ -1,8 +1,14 @@
 import styles from "./ProfileForm.module.css";
+import { useState } from "react";
 
 const ProfileForm = function () {
+  const submitHandler = function (event: React.SyntheticEvent) {
+    event.preventDefault();
+    console.log("hello");
+  };
+
   return (
-    <form className={styles["profile-form"]}>
+    <form onSubmit={submitHandler} className={styles["profile-form"]}>
       <div className={styles["profile-form-grouping"]}>
         <div className={styles["input-image"]}>
           <label className={styles["form-label"]} htmlFor="profile-image">

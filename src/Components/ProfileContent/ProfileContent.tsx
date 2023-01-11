@@ -4,7 +4,7 @@ const ProfileContent = function () {
   return (
     <div className={styles["profile-content"]}>
       <div className={styles["profile-content-grouping"]}>
-        <div className={styles["profile-image"]}>
+        <div>
           <img
             alt="Profile Image"
             src={require("../../Assets/mock-profile-picture.png")}
