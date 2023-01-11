@@ -8,6 +8,7 @@ const ProfileContent = function () {
           <img
             alt="Profile Image"
             src={require("../../Assets/mock-profile-picture.png")}
+            className={styles["profile-image-file"]}
           ></img>
         </div>
         <div className={styles["full-name"]}>
@@ -25,7 +26,7 @@ const ProfileContent = function () {
         <div className={styles["profile-experience"]}>
           <h3 className={styles["profile-experience-text"]}>
             Has Worked With{" "}
-            <span className={styles["profile-experience-text-color"]}>4</span>{" "}
+            <span className={styles["profile-experience-text-color"]}>4</span>
             <br />
             Different Brands
           </h3>
@@ -34,9 +35,13 @@ const ProfileContent = function () {
           <h3 className={styles["profile-type-text"]}>
             Favorite Deal Type:
             <br />
-            Supplements
+            <span className={styles["profile-experience-text-color"]}>
+              Supplements
+            </span>
             <br />
-            Clothing
+            <span className={styles["profile-experience-text-color"]}>
+              Clothing
+            </span>
           </h3>
         </div>
       </div>

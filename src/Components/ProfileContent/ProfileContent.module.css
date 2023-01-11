@@ -1,0 +1,57 @@
+.profile-content {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 7.5rem;
+  justify-content: center;
+  align-content: center;
+  padding: 12.5rem;
+}
+
+.profile-content-grouping {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.profile-image {
+}
+
+.profile-image-file {
+  height: 27.5rem;
+  width: 27.5rem;
+  border-radius: 100%;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.full-name,
+.profile-description,
+.profile-experience,
+.profile-type {
+  padding: 1rem 4rem;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.full-name-text {
+  font-size: 4.5rem;
+}
+
+.profile-description-text {
+  font-size: 2rem;
+}
+
+.profile-experience-text {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.profile-experience-text-color {
+  color: rgb(255, 70, 70);
+}
+
+.profile-type-text {
+  font-size: 3rem;
+}
