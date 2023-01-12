@@ -5,11 +5,22 @@ const ProfileForm = function () {
   const submitHandler = function (event: any) {
     event.preventDefault();
 
+    const checkedBoxes = Array.from(event.target.preferredDeal)
+      .filter((checkedBox: any) => {
+        if (checkedBox.checked) {
+          return checkedBox;
+        }
+      })
+      .map((checkedBox: any) => {
+        return checkedBox.value;
+      });
+    console.log(checkedBoxes);
+
     const profileData = {
       profileImage: event.target.profileImage.value,
       fullName: event.target.name.value,
       personalBio: event.target.personalBio.value,
-      supplements: event.target.supplement.value,
+      supplements: event.target.preferredDeal,
     };
     console.log(profileData);
   };
@@ -60,7 +71,7 @@ const ProfileForm = function () {
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
-            name="supplement"
+            name="preferredDeal"
             value="supplement"
             id="checkbox-supplement"
           ></input>
@@ -72,7 +83,7 @@ const ProfileForm = function () {
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
-            name="clothing"
+            name="preferredDeal"
             value="clothing"
             id="checkbox-clothing"
           ></input>
@@ -84,7 +95,7 @@ const ProfileForm = function () {
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
-            name="membership"
+            name="preferredDeal"
             value="membership"
             id="checkbox-membership"
           ></input>
@@ -96,7 +107,7 @@ const ProfileForm = function () {
           <input
             type="checkbox"
             className={styles["form-checkbox"]}
-            name="equipment"
+            name="preferredDeal"
             value="equipment"
             id="checkbox-equipment"
           ></input>
