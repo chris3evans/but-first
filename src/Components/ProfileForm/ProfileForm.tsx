@@ -1,10 +1,17 @@
 import styles from "./ProfileForm.module.css";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 const ProfileForm = function () {
-  const submitHandler = function (event: React.SyntheticEvent) {
+  const submitHandler = function (event: any) {
     event.preventDefault();
-    console.log("hello");
+
+    const profileData = {
+      profileImage: event.target.profileImage.value,
+      fullName: event.target.name.value,
+      personalBio: event.target.personalBio.value,
+      supplements: event.target.supplement.value,
+    };
+    console.log(profileData);
   };
 
   return (
@@ -54,6 +61,7 @@ const ProfileForm = function () {
             type="checkbox"
             className={styles["form-checkbox"]}
             name="supplement"
+            value="supplement"
             id="checkbox-supplement"
           ></input>
           <label className={styles["form-label"]} htmlFor="checkbox-supplement">
@@ -65,6 +73,7 @@ const ProfileForm = function () {
             type="checkbox"
             className={styles["form-checkbox"]}
             name="clothing"
+            value="clothing"
             id="checkbox-clothing"
           ></input>
           <label className={styles["form-label"]} htmlFor="checkbox-clothing">
@@ -76,6 +85,7 @@ const ProfileForm = function () {
             type="checkbox"
             className={styles["form-checkbox"]}
             name="membership"
+            value="membership"
             id="checkbox-membership"
           ></input>
           <label className={styles["form-label"]} htmlFor="checkbox-membership">
@@ -87,6 +97,7 @@ const ProfileForm = function () {
             type="checkbox"
             className={styles["form-checkbox"]}
             name="equipment"
+            value="equipment"
             id="checkbox-equipment"
           ></input>
           <label className={styles["form-label"]} htmlFor="checkbox-equipment">
