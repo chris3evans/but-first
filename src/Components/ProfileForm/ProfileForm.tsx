@@ -5,22 +5,11 @@ const ProfileForm = function () {
   const submitHandler = function (event: any) {
     event.preventDefault();
 
-    const checkedBoxes = Array.from(event.target.preferredDeal)
-      .filter((checkedBox: any) => {
-        if (checkedBox.checked) {
-          return checkedBox;
-        }
-      })
-      .map((checkedBox: any) => {
-        return checkedBox.value;
-      });
-    console.log(checkedBoxes);
-
     const profileData = {
       profileImage: event.target.profileImage.value,
       fullName: event.target.name.value,
       personalBio: event.target.personalBio.value,
-      supplements: event.target.preferredDeal,
+      brandDeal: event.target.brandDeal.value,
     };
     console.log(profileData);
   };
@@ -63,58 +52,24 @@ const ProfileForm = function () {
           className={styles["textarea-input"]}
         ></textarea>
       </div>
-      <div className={styles["check-box-container"]}>
+      <div className={styles["brands-container"]}>
         <p className={styles["deal-title"]}>
           What type of brand deals are you looking for?
         </p>
-        <div className={styles["checkbox-field"]}>
-          <input
-            type="checkbox"
-            className={styles["form-checkbox"]}
-            name="preferredDeal"
-            value="supplement"
-            id="checkbox-supplement"
-          ></input>
-          <label className={styles["form-label"]} htmlFor="checkbox-supplement">
-            Supplements
-          </label>
-        </div>
-        <div className={styles["checkbox-field"]}>
-          <input
-            type="checkbox"
-            className={styles["form-checkbox"]}
-            name="preferredDeal"
-            value="clothing"
-            id="checkbox-clothing"
-          ></input>
-          <label className={styles["form-label"]} htmlFor="checkbox-clothing">
+        <select className={styles["brands-selector"]} name="brandDeal">
+          <option className={styles["brands-option"]} value="clothing">
             Clothing
-          </label>
-        </div>
-        <div className={styles["checkbox-field"]}>
-          <input
-            type="checkbox"
-            className={styles["form-checkbox"]}
-            name="preferredDeal"
-            value="membership"
-            id="checkbox-membership"
-          ></input>
-          <label className={styles["form-label"]} htmlFor="checkbox-membership">
-            Membership / Subscription
-          </label>
-        </div>
-        <div className={styles["checkbox-field"]}>
-          <input
-            type="checkbox"
-            className={styles["form-checkbox"]}
-            name="preferredDeal"
-            value="equipment"
-            id="checkbox-equipment"
-          ></input>
-          <label className={styles["form-label"]} htmlFor="checkbox-equipment">
-            Equipment / Gear
-          </label>
-        </div>
+          </option>
+          <option className={styles["brands-option"]} value="supplements">
+            Supplements
+          </option>
+          <option className={styles["brands-option"]} value="memberships">
+            Memberships
+          </option>
+          <option className={styles["brands-option"]} value="equipment">
+            Equipment
+          </option>
+        </select>
       </div>
       <div className={styles["button-container"]}>
         <button className={styles["submit-profile-button"]} type="submit">
