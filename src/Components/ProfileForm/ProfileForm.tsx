@@ -1,8 +1,9 @@
 import styles from "./ProfileForm.module.css";
 import { useState, FormEvent } from "react";
+import { addProfileInfo } from "../../Services/api-service";
 
 const ProfileForm = function () {
-  const submitHandler = function (event: any) {
+  const submitHandler = async function (event: any) {
     event.preventDefault();
 
     const profileData = {
@@ -12,6 +13,13 @@ const ProfileForm = function () {
       brandDeal: event.target.brandDeal.value,
     };
     console.log(profileData);
+
+    try {
+      await addProfileInfo(profileData);
+      return "profile data saved";
+    } catch (error) {
+      return `Error profile data not saved: ${error}`;
+    }
   };
 
   return (

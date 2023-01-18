@@ -1,5 +1,6 @@
 export interface ProfileData {
-  profilePhoto: string;
+  profileImage: string;
   fullName: string;
   personalBio: string;
+  brandDeal: string;
 }
